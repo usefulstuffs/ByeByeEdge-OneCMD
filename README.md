@@ -12,7 +12,7 @@ THIS SCRIPT IS IN BETA, AS WELL THE LICENSE SAYS THAT I DO NOT TAKE RESPONSIBILI
 ## Running the script
 It's easy! Follow those easy steps:
 1. Open powershell as administrator
-2. Type ```irm http://vichingo455.ddns.net/powershell/UninstallEdge.ps1``` (don't irm blindly, [audit the script](http://vichingo455.ddns.net/powershell/UninstallEdge.ps1) before running the command, I'm not doing anything bad!)
+2. Type ```irm http://vichingo455.ddns.net/powershell/UninstallEdge.ps1 | iex``` (don't irm blindly, [audit the script](http://vichingo455.ddns.net/powershell/UninstallEdge.ps1) before running the command, I'm not doing anything bad!)
 3. Wait for the script to uninstall Edge on your system
 4. Enjoy :)
 
