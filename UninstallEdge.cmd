@@ -96,6 +96,8 @@ for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-AppxPackage -AllUs
         powershell -Command "Remove-AppxPackage -Package '!APP!' -AllUsers" 2>nul
     )
 )
+for /f %f in ('dir /s /b %SystemRoot%\SystemApps\Microsoft.MicrosoftEdge*') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
+for /f %f in ('dir /s /b %SystemRoot%\System32\MicrosoftEdge*.exe') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
 echo Microsoft Edge should be now uninstalled.
 echo Please reboot Windows.
 pause
@@ -146,6 +148,9 @@ for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-AppxPackage -AllUs
         powershell -Command "Remove-AppxPackage -Package '!APP!' -AllUsers" 2>nul
     )
 )
+for /f %f in ('dir /s /b %SystemRoot%\SystemApps\Microsoft.MicrosoftEdge*') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
+for /f %f in ('dir /s /b %SystemRoot%\System32\MicrosoftEdge*.exe') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
+for /f %f in ('dir /s /b %SystemRoot%\SysWOW64\MicrosoftEdge*.exe') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
 echo Microsoft Edge should be now uninstalled.
 echo Please reboot Windows.
 pause
@@ -154,6 +159,5 @@ goto eof
 :noedge
 echo Preinstalled Edge Chromium was not found!
 pause
-exit
 
 :eof
