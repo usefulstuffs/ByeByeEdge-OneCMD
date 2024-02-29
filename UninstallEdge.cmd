@@ -63,7 +63,7 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft E
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge Update" /f > nul
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView" /f > nul
 reg delete "HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\{9459C573-B17A-45AE-9F64-1857B5D58CEE}" /f > nul
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate" > nul
+reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate" /f > nul
 net stop MicrosoftEdgeElevationService > nul
 sc delete MicrosoftEdgeElevationService > nul
 net stop edgeupdate > nul
@@ -114,7 +114,7 @@ reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge Update" /f > nul
 reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView" /f > nul
 reg delete "HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\{9459C573-B17A-45AE-9F64-1857B5D58CEE}" /f > nul
-reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate" > nul
+reg delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate" /f > nul
 net stop MicrosoftEdgeElevationService > nul
 sc delete MicrosoftEdgeElevationService > nul
 net stop edgeupdate > nul
