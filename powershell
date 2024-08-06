@@ -1,0 +1,25 @@
+$ErrorActionPreference = "Stop"
+[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
+
+$DownloadURL = 'https://raw.githubusercontent.com/usefulstuffs/ByeByeEdge-OneCMD/main/UninstallEdge.cmd'
+
+try {
+	$response = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
+	$rand = [Guid]::NewGuid().Guid
+	$isAdmin = [bool]([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544')
+	$FilePath = if ($isAdmin) { "$env:SystemRoot\Temp\UninstallEdge_$rand.cmd" } else { "$env:TEMP\UnintallEdge_$rand.cmd" }
+
+	$ScriptArgs = "$args "
+	$prefix = "@::: $rand `r`n"
+	$content = $prefix + $response
+	Set-Content -Path $FilePath -Value $content
+
+	$env:ComSpec = "$env:SystemRoot\system32\cmd.exe"
+	Start-Process cmd.exe "/c """"$FilePath"" $ScriptArgs""" -Wait
+
+	$FilePaths = @("$env:TEMP\UninstallEdge*.cmd", "$env:SystemRoot\Temp\UninstallEdge*.cmd")
+	foreach ($FilePath in $FilePaths) { Get-Item $FilePath | Remove-Item }
+}
+catch {
+	Write-Host "Download failed."
+}
