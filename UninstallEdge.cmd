@@ -82,10 +82,7 @@ del /f /q "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.ln
 del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" > nul
 del /f /q "%appdata%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Microsoft Edge.lnk" > nul
 reg add "HKLM\Software\Microsoft\EdgeUpdate" /v "DoNotUpdateToEdgeWithChromium" /t REG_DWORD /d 1 /f > nul
-schtasks /delete /tn "\MicrosoftEdgeUpdateTaskMachineCore" /f
-schtasks /delete /tn "\MicrosoftEdgeUpdateTaskMachineUA" /f
-schtasks /delete /tn "\MicrosoftEdgeUpdateBrowserReplacementTask" /f
-for /f %f in ('dir /s /b %SystemRoot%\System32\Tasks\MicrosoftEdge*') do (del /f /q "%f")
+for /f %f in ('dir /s /b %SystemRoot%\System32\Tasks\*MicrosoftEdge*') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
 for /f "delims=" %%a in ('powershell "(New-Object System.Security.Principal.NTAccount($env:USERNAME)).Translate([System.Security.Principal.SecurityIdentifier]).Value"') do set "USER_SID=%%a"
 for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-AppxPackage -AllUsers ^| Where-Object { $_.PackageFullName -like '*microsoftedge*' } ^| Select-Object -ExpandProperty PackageFullName"') do (
     if not "%%a"=="" (
@@ -135,10 +132,7 @@ del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" >
 del /f /q "%appdata%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Microsoft Edge.lnk" > nul
 reg add "HKLM\Software\Microsoft\EdgeUpdate" /v "DoNotUpdateToEdgeWithChromium" /t REG_DWORD /d 1 /f > nul
 reg add "HKLM\Software\WOW6432Node\Microsoft\EdgeUpdate" /v "DoNotUpdateToEdgeWithChromium" /t REG_DWORD /d 1 /f > nul
-schtasks /delete /tn "\MicrosoftEdgeUpdateTaskMachineCore" /f
-schtasks /delete /tn "\MicrosoftEdgeUpdateTaskMachineUA" /f
-schtasks /delete /tn "\MicrosoftEdgeUpdateBrowserReplacementTask" /f
-for /f %f in ('dir /s /b %SystemRoot%\System32\Tasks\MicrosoftEdge*') do (del /f /q "%f")
+for /f %f in ('dir /s /b %SystemRoot%\System32\Tasks\*MicrosoftEdge*') do (takeown /f "%f" && icacls "%f" /grant everyone:F && del /f /q "%f")
 for /f "delims=" %%a in ('powershell "(New-Object System.Security.Principal.NTAccount($env:USERNAME)).Translate([System.Security.Principal.SecurityIdentifier]).Value"') do set "USER_SID=%%a"
 for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-AppxPackage -AllUsers ^| Where-Object { $_.PackageFullName -like '*microsoftedge*' } ^| Select-Object -ExpandProperty PackageFullName"') do (
     if not "%%a"=="" (
