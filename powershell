@@ -1,9 +1,12 @@
+Write-Host "Bye Bye Edge! One Command Line Edition by Useful Stuffs"
+Write-Host " "
 $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
 
 $DownloadURL = 'https://raw.githubusercontent.com/usefulstuffs/ByeByeEdge-OneCMD/main/UninstallEdge.cmd'
 
 try {
+	Write-Host "Downloading..."
 	$response = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
 	$rand = [Guid]::NewGuid().Guid
 	$isAdmin = [bool]([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544')
@@ -15,11 +18,13 @@ try {
 	Set-Content -Path $FilePath -Value $content
 
 	$env:ComSpec = "$env:SystemRoot\system32\cmd.exe"
+	Write-Host "Running Uninstall Script... Please check for errors in the command prompt window."
 	Start-Process cmd.exe "/c """"$FilePath"" $ScriptArgs""" -Wait
 
+	Write-Host "Clearing temporary files..."
 	$FilePaths = @("$env:TEMP\UninstallEdge*.cmd", "$env:SystemRoot\Temp\UninstallEdge*.cmd")
 	foreach ($FilePath in $FilePaths) { Get-Item $FilePath | Remove-Item }
 }
 catch {
-	Write-Host "Download failed."
+	Write-Host "Edge Removal failed. Please check your internet connection or privileges in the system."
 }
