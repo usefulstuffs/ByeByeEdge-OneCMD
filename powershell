@@ -15,7 +15,7 @@ try {
 	Set-Content -Path $FilePath -Value $content
 
 	$env:ComSpec = "$env:SystemRoot\system32\cmd.exe"
-	Start-Process cmd.exe "/k """"$FilePath"" $ScriptArgs""" -Wait
+	Start-Process cmd.exe "/c """"$FilePath"" $ScriptArgs""" -Wait
 
 	$FilePaths = @("$env:TEMP\UninstallEdge*.cmd", "$env:SystemRoot\Temp\UninstallEdge*.cmd")
 	foreach ($FilePath in $FilePaths) { Get-Item $FilePath | Remove-Item }
