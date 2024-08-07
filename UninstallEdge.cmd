@@ -108,6 +108,21 @@ for /f "delims=" %%f in ('dir /s /b %SystemRoot%\System32\MicrosoftEdge*.exe') d
     icacls "%%f" /grant everyone:F
     del /f /q "%%f"
 )
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications" /v "Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.htm\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.html\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.mht\OpenWithProgIds" /v "MSEdgeMHT" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.mhtml\OpenWithProgIds" /v "MSEdgeMHT" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.pdf\OpenWithProgIds" /v "MSEdgePDF" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.shtml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.svg\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.webp\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xht\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xhtml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration" /f
 echo Microsoft Edge should be now uninstalled.
 echo Please reboot Windows.
 pause
@@ -175,6 +190,25 @@ for /f "delims=" %%f in ('dir /s /b %SystemRoot%\SysWOW64\MicrosoftEdge*.exe') d
     icacls "%%f" /grant everyone:F
     del /f /q "%%f"
 )
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications" /v "Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Clients\StartMenuInternet\Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\RegisteredApplications" /v "Microsoft Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.htm\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.html\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.mht\OpenWithProgIds" /v "MSEdgeMHT" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.mhtml\OpenWithProgIds" /v "MSEdgeMHT" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.pdf\OpenWithProgIds" /v "MSEdgePDF" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.shtml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.svg\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.webp\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xht\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xhtml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xml\OpenWithProgIds" /v "MSEdgeHTM" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Edge" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\EdgeIntegration" /f
 echo Microsoft Edge should be now uninstalled.
 echo Please reboot Windows.
 pause
