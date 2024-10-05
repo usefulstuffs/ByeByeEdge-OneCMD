@@ -12,13 +12,13 @@ THIS SCRIPT IS IN BETA, AS WELL THE LICENSE SAYS THAT I DO NOT TAKE RESPONSIBILI
 ## Running the script (Method 1)
 Really one command!
 1. Press Windows key and R at the same time
-2. Type ```powershell irm https://tinyurl.com/3dpsbyvb | iex``` on the run box (don't irm blindly, [audit the script](https://tinyurl.com/3dpsbyvb) before running the command, I'm not doing anything bad!)
+2. Type ```powershell irm https://shorturl.at/rzE6E | iex``` on the run box (don't irm blindly, [audit the script](https://shorturl.at/rzE6E) before running the command, I'm not doing anything bad!)
 3. Press enter and wait for the script to finish (UAC prompt might appear, click yes)
 
 ## Running the script (Method 2)
 It's easy! Follow those easy steps:
 1. Open powershell
-2. Type ```irm https://tinyurl.com/3dpsbyvb | iex``` (don't irm blindly, [audit the script](https://tinyurl.com/3dpsbyvb) before running the command, I'm not doing anything bad!)
+2. Type ```irm https://shorturl.at/rzE6E | iex``` (don't irm blindly, [audit the script](https://shorturl.at/rzE6E) before running the command, I'm not doing anything bad!)
 3. Wait for the script to uninstall Edge on your system (UAC prompt might appear, click yes)
 4. Enjoy :)
 
