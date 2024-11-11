@@ -22,7 +22,7 @@ try {
 	Start-Process cmd.exe "/c """"$FilePath"" $ScriptArgs""" -Wait
 
 	Write-Host "Clearing temporary files..."
-	$FilePaths = @("$env:TEMP\UninstallEdge*.cmd", "$env:SystemRoot\Temp\UninstallEdge*.cmd")
+	$FilePaths = @("$env:TEMP\UninstallEdge*.cmd", "$env:SystemRoot\Temp\UninstallEdge*.cmd", "$env:TEMP\OEgetPriv_UninstallEdge*.vbs")
 	foreach ($FilePath in $FilePaths) { Get-Item $FilePath | Remove-Item }
 }
 catch {
