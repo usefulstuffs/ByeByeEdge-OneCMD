@@ -1,0 +1,5 @@
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+- jekyll-remote-theme
+title: Bye Bye Edge! One Command Line Edition
+description: Remove Microsoft Edge from your system
