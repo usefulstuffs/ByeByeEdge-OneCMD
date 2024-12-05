@@ -5,6 +5,7 @@ WHAT YOU RUN ON YOUR MACHINE IS YOUR RESPONSIBILITY. MAKE SURE TO HAVE AN ALTERN
 - Microsoft Edge preinstalled in the system
 - Microsoft Edge installed system-wide
 - EDGE ENTERPRISE IS NOT SUPPORTED BY THE SCRIPT.
+
 ## Running the script (Method 1)
 Really one command!
 1. Press Windows key and R at the same time
