@@ -1,6 +1,3 @@
-# Bye Bye Edge! One Command Line Edition
-Bye Bye Edge! Uninstall Microsoft Edge with one command line!
-
 ## Disclaimer
 WHAT YOU RUN ON YOUR MACHINE IS YOUR RESPONSIBILITY. MAKE SURE TO HAVE AN ALTERNATIVE BROWSER INSTALLED SUCH AS BRAVE OR FIREFOX BEFORE PROCEEDING.
 
