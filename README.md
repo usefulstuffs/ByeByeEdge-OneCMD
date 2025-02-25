@@ -9,13 +9,13 @@ WHAT YOU RUN ON YOUR MACHINE IS YOUR RESPONSIBILITY. MAKE SURE TO HAVE AN ALTERN
 ## Running the script (Method 1)
 Really one command!
 1. Press Windows key and R at the same time
-2. Type ```powershell irm https://shorturl.at/rzE6E | iex``` on the run box (don't irm blindly, [audit the script](https://shorturl.at/rzE6E) before running the command, I'm not doing anything bad!)
+2. Type ```powershell irm https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell | iex``` on the run box (don't irm blindly, [audit the script](https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell) before running the command, I'm not doing anything bad!)
 3. Press enter and wait for the script to finish (UAC prompt might appear, click yes)
 
 ## Running the script (Method 2)
 It's easy! Follow those easy steps:
 1. Open powershell
-2. Type ```irm https://shorturl.at/rzE6E | iex``` (don't irm blindly, [audit the script](https://shorturl.at/rzE6E) before running the command, I'm not doing anything bad!)
+2. Type ```irm https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell | iex``` (don't irm blindly, [audit the script](https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell) before running the command, I'm not doing anything bad!)
 3. Wait for the script to uninstall Edge on your system (UAC prompt might appear, click yes)
 4. Enjoy :)
 
