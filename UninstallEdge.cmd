@@ -124,6 +124,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.xml\OpenWithProgIds" /v "MSEdge
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration" /f
 echo Microsoft Edge should be now uninstalled.
+timeout /t 5 /nobreak >nul 2>&1
 goto eof
 
 :uninstall64
@@ -208,6 +209,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Edge" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\EdgeIntegration" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\EdgeIntegration" /f
 echo Microsoft Edge should be now uninstalled.
+timeout /t 5 /nobreak >nul 2>&1
 goto eof
 
 :noedge
