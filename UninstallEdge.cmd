@@ -214,6 +214,6 @@ goto eof
 
 :noedge
 echo Preinstalled Edge Chromium was not found!
-pause
+timeout /t 5 /nobreak >nul 2>&1
 
 :eof
