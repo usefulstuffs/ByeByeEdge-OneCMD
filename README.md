@@ -6,18 +6,36 @@ WHAT YOU RUN ON YOUR MACHINE IS YOUR RESPONSIBILITY. MAKE SURE TO HAVE AN ALTERN
 - Microsoft Edge installed system-wide
 - EDGE ENTERPRISE IS NOT SUPPORTED BY THE SCRIPT.
 
-## Running the script (Method 1)
-Really one command!
-1. Press Windows key and R at the same time
-2. Type ```powershell irm https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell | iex``` on the run box (don't irm blindly, [audit the script](https://github.com/usefulstuffs/ByeByeEdge-OneCMD/blob/main/powershell) before running the command, I'm not doing anything bad!)
-3. Press enter and wait for the script to finish (UAC prompt might appear, click yes)
+## How to run the script
+<details>
+  <summary><strong>Method 1</strong></summary>
+  <br>
+  
+  Really one command!
+  1. Press Windows key and R at the same time
+  2. Type ```powershell irm https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell | iex``` on the run box (don't irm blindly, [audit the script](https://github.com/usefulstuffs/ByeByeEdge-OneCMD/blob/main/powershell) before running the command, I'm not doing anything bad!)
+  3. Press enter and wait for the script to finish (UAC prompt might appear, click yes)
+</details>
 
-## Running the script (Method 2)
-It's easy! Follow those easy steps:
-1. Open powershell
-2. Type ```irm https://usefulstuffs.github.io/ByeByeEdge-OneCMD/powershell | iex``` (don't irm blindly, [audit the script](https://github.com/usefulstuffs/ByeByeEdge-OneCMD/blob/main/powershell) before running the command, I'm not doing anything bad!)
-3. Wait for the script to uninstall Edge on your system (UAC prompt might appear, click yes)
-4. Enjoy :)
+<details>
+  <summary><strong>Method 2</strong></summary>
+  <br>
+
+  For those who cannot use powershell, there's the classic way to use the script:
+1. Download [the script](https://usefulstuffs.github.io/ByeByeEdge-OneCMD/UninstallEdge.cmd)
+2. Run it
+3. Wait for it to remove Edge for you
+4. Enjoy!
+</details>
+
+<details>
+  <summary><strong>Backup Mirror</strong></summary>
+  <br>
+
+  For those not able to access this page, here's the list of mirrors:
+  - [Vichingo455's GIT](https://git.vichingo455.freeddns.org/Vichingo455/ByeByeEdge-OneCMD)
+
+</details>
 
 ## Rights
 Thanks to [ShadowWhisperer](https://github.com/ShadowWhisperer) for his [Uninstall Edge script](https://github.com/ShadowWhisperer/Remove-MS-Edge) as I took some code from him.
